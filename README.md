@@ -39,6 +39,15 @@ test:  # test images (optional)
 Classes  
 names:
 
+**Training & testing**
+1.	Training
+```
+yolo detect train data=.yaml model=yolov8-FWR.yaml epochs=200 batch=32 imgsz=640 val=True patience=50 optimizer='AdamW'
+```
+2.	Validation
+```
+yolo detect val data=.yaml model=best.pt imgsz=640 batch=32 conf=0.0001'
+```
 # Descriptive
 Underwater laser imaging often suffers from significant background noise in the form of noisy lightbars, which adversely affects the imaging process and subsequent 3D reconstruction. To address this issue, we propose a lightweight deep learning algorithm named YOLOv8-FWR specifically designed to enhance the efficiency and quality of underwater laser imaging by accurately detecting lightbars in the ROI region. Our approach comprises three key components: (1) a novel Focal_SPPF pooling module to mitigate background noise interference; (2) a Weighted Feature Concat Module (WFCM) to improve the detection of small target lightbars, ensuring complete 3D reconstruction; and (3) an optimized C2f_Rep module to lightweight the backbone network, reducing parameters while maintaining accuracy. We developed a dataset for underwater scenarios and evaluated the improved model through ablation and comparison experiments. Results show that YOLOv8-FWR outperforms the original model by achieving an 8.6% improvement in mAP50-95 and reducing parameters by 18.3%. A favorable balance between detection accuracy and number of parameters is achieved. Additionally, experiments on public datasets (VOC2012 and UDD) validate its good generalizability.
 # Datasets

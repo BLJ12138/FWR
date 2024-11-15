@@ -29,7 +29,7 @@ Create a yaml file to configure the dataset:
  parent  
  ├── ultralytics  
  └── datasets  
-     └── data  
+     └── data(Includes images, labels and yaml configuration files.)  
 Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]  
 path: ../datasets/data  # datset rooat dir  
 train: images/train2017  # train images (relative to 'path')   

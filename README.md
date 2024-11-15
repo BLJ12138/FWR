@@ -39,7 +39,7 @@ test:  # test images (optional)
 Classes  
 names:
 
-**Training & testing**
+**Training & validation**
 1.	Training
 ```
 yolo detect train data=.yaml model=yolov8-FWR.yaml epochs=200 batch=32 imgsz=640 val=True patience=50 optimizer='AdamW'

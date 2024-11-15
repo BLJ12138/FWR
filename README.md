@@ -24,6 +24,7 @@ This setup is for Windows 11 and NVIDIA-supported GPU.
 
 **Data preparation**  
 The labeled file of the image is in txt format.  
+Create a yaml file to configure the dataset:  
  Example usage: yolo train data=coco128.yaml  
  parent  
  ├── ultralytics  

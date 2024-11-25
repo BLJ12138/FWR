@@ -1,7 +1,7 @@
 # YOLOv8-FWR
 A lightweight model for underwater ROI region target detection. 
 
-**Environment Dependencies Setting**  
+## **Environment Dependencies Setting**  
 
 This setup is for Windows 11 and NVIDIA-supported GPU.
 1.	Install Python 3.8.19, 64 bit
@@ -22,7 +22,7 @@ This setup is for Windows 11 and NVIDIA-supported GPU.
 16.	Thop Installation- Version 0.1.1.pos2209072238
 17.	Torchsummary Installation- Version 1.5.1
 
-**Data preparation**  
+##  **Data preparation**  
 The labeled file of the image is in txt format.  
 Create a yaml file to configure the dataset:  
  Example usage: yolo train data=coco128.yaml  
@@ -39,7 +39,7 @@ test:  # test images (optional)
 Classes  
 names:
 
-**Training & validation**  
+## **Training & validation**  
 
 Model `*.yaml` files may be used directly in the Command Line Interface (CLI) with a `yolo` command:
 

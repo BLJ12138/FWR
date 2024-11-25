@@ -39,7 +39,24 @@ test:  # test images (optional)
 Classes  
 names:
 
-**Training & validation**
+**Training & validation**  
+
+Model `*.yaml` files may be used directly in the Command Line Interface (CLI) with a `yolo` command:
+
+```bash
+yolo task=detect mode=train model=yolov8n.yaml data=coco128.yaml epochs=100
+```
+
+They may also be used directly in a Python environment, and accepts the same [arguments](https://docs.ultralytics.com/usage/cfg/) as in the CLI example above:
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("model.yaml")  # build a YOLOv8n model from scratch
+# YOLO("model.pt")  use pre-trained model if available
+model.info()  # display model information
+model.train(data="coco128.yaml", epochs=100)  # train the model
+```
 1.	Training
 ```
 yolo detect train data=.yaml model=yolov8-FWR.yaml epochs=200 batch=32 imgsz=640 val=True patience=50 optimizer='AdamW'

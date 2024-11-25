@@ -22,6 +22,11 @@ This setup is for Windows 11 and NVIDIA-supported GPU.
 16.	Thop Installation- Version 0.1.1.pos2209072238
 17.	Torchsummary Installation- Version 1.5.1
 
+Install Dependencies: To install all the dependencies listed in the requirements.txt file, you can use the following command in your project's directory:
+```
+pip install -r requirements.txt
+```
+This will install each package and the specific version specified in the file.
 ##  **Data preparation**  
 The labeled file of the image is in txt format.  
 Create a yaml file to configure the dataset:  
